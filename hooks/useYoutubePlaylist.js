@@ -1,8 +1,9 @@
 // api/youtube.js
 import axios from 'axios';
-import { fetcher } from '/lib/fetcher.js';
 import { useState, useEffect } from 'react';
-import useSWR from 'swr';
+
+// Import the NEXT_PUBLIC_YOUTUBE_KEY from local.env
+const { NEXT_PUBLIC_YOUTUBE_KEY } = process.env;
 
 export const useYoutubePlaylist = () => {
     const [showVideos, setShowVideos] = useState(false);
@@ -18,7 +19,7 @@ export const useYoutubePlaylist = () => {
                 playlistId: 'PLQWdi0MuGKqtEqEJXch4HHlj3dNSCO4yB',
                 // Use the key from the .env file
                 // key: process.env.YOUTUBE_KEY
-                key: process.env.NEXT_PUBLIC_YOUTUBE_KEY
+                key: process.env.NEXT_PUBLIC_YOUTUBE_KEY,
             }
         })
         .then(response => {
@@ -27,7 +28,6 @@ export const useYoutubePlaylist = () => {
                 title: item.snippet.title,
                 videoId: item.snippet.resourceId.videoId
             }));
-            console.log(videos);
             setVideos(videos);
             setActiveVideo(videos[0].videoId);
         });
