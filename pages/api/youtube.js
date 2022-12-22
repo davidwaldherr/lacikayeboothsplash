@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     }
   })
   .then(response => {
-    // Map over the response and extract the title and videoId
+    // Map ovaer the response and extract the title and videoId
     const videos = response.data.items.map(item => ({
       title: item.snippet.title,
       videoId: item.snippet.resourceId.videoId
@@ -20,3 +20,4 @@ export default async function handler(req, res) {
     res.status(200).json(videos);
   });
 }
+// 
