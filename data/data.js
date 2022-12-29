@@ -1,3 +1,3 @@
 export const images = ['./damngood.jpg', './lastalbum.jpg', './lastalbum.jpg','./lastalbum.jpg', './firstalbum.jpg', './lastalbum.jpg', './lastalbum.jpg','./lastalbum.jpg', './lastalbum.jpg', './firstalbum.jpg'];
-export const links = ['https://open.spotify.com/track/3FwBnV4NPxDrGiu8WsocXh?si=63b8d6160cec4e19ink1', 'link2', 'link3'];
+export const links = ['https://ffm.to/damngoodinadivebar'];
 export const names = ['Damn Good in a Dive Bar', 'Shuffle', 'Treasure', 'Used To You', 'Don\'t Call Me', 'Heart Of Texas', 'On The Fence', 'Broken Heart Still Beats', 'If He Would\'ve Stayed', 'I\'m Over You'];

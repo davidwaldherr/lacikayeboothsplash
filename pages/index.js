@@ -1,7 +1,5 @@
-import { Box, CloseButton, Section, Button, Wrap, WrapItem, Center, Container, Link, Image, HStack, Icon, Stack, ButtonGroup, IconButton, Text, Img } from '@chakra-ui/react'
-import { FaPlay } from 'react-icons/fa'
+import { Box, Link, useBreakpointValue, Container, useColorModeValue, Stack, Heading, Button, Center, Image, Text } from '@chakra-ui/react'
 import * as React from 'react'
-import styles from '../styles/Home.module.css'
 import IconLinks from '../components/iconLinks'
 import { useState } from 'react'
 import { YoutubePlaylist } from "../components/YoutubePlaylist.js";
@@ -48,15 +46,19 @@ const [showBanner, setShowBanner] = useState(false);
     </Box>
 
     {/* MUSIC */}
+    <Center>
+      
+    </Center>
     <Box 
       borderTopColor={"#fca1da"}
       borderTopWidth={5}
+      borderBottomColor={"#fca1da"}
+      borderBottomWidth={5}
       backgroundColor="white" 
       position="relative" 
       width='100%' 
       backgroundImage="./rose.png"
       backgroundPosition={"center"}
-      paddingBottom={15}
     >
       <Box bg="rgba(0, 0, 0, 0.7)">
         <Text pt="4" color="#fca1da" textAlign={"center"} paddingTop={5} fontSize={110} fontFamily={'corsiva'}>
@@ -68,23 +70,45 @@ const [showBanner, setShowBanner] = useState(false);
     </Box>
 
     {/* TOUR */}
+
+    <Box w="100%" position="relative" backgroundColor="black">
+    <Center>
     <Box
-      backgroundColor="white"
-      position="relative"
-      width='100%'
-      height='auto'
-      paddingBottom={20}
-    >
+  minW="350px"
+  backgroundColor="#fca1da"
+  boxShadow={useColorModeValue('sm', 'sm-dark')}
+  borderRadius="xl"
+  px={{ base: '4', md: '8' }}
+  py={{ base: '6', md: '10' }}
+  justify-content="center"
+  align-items="center"
+  max-width="100%"
+  mt="20px"
+  mb="20px"
+>
+    <Stack spacing="8" direction={{ base: 'column', lg: 'row' }} justify="space-between">
+      <Stack spacing="4" maxW="2xl">
+        <Heading size="md">Want to see Laci on tour?</Heading>
+        <Text color="muted" fontSize={useBreakpointValue({ base: 'lg', lg: 'xl' })}>
+          Get notified when events are in your area
+        </Text>
+      </Stack>
+      <Stack spacing="3" direction={{ base: 'column', sm: 'row' }} justify={{ base: 'start' }}>
+        <Link href="https://www.bandsintown.com/a/14755343?came_from=267&app_id=linktree-0014755343&utm_medium=api&utm_source=public_api&utm_campaign=artist" target="_blank">
+        <Button variant="solid" size="lg">
+          Follow Laci Kaye Booth
+        </Button>
+        </Link>
+      </Stack>
+    </Stack>
+  </Box>
+    </Center>
+    
+</Box>
 
-      <Text color="black" textAlign={"center"} paddingTop={5} fontSize={110} fontFamily={'corsiva'}>
-        TOUR
-      </Text>
 
-      <Center>
-        <Button variant="solid" size="lg">Buy Tickets</Button>
-      </Center>
 
-    </Box>
+
 
 
     {/* VIDEOS */}

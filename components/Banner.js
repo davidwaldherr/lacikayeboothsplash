@@ -21,6 +21,12 @@ import {
       base: true,
       md: false,
     })
+
+    // Open the following link in a new tab: https://ffm.to/damngoodinadivebar
+    const clickHandler = () => {
+      window.open('https://ffm.to/damngoodinadivebar', '_blank')
+    }
+
     return (
       <>
         {showBanner && (
@@ -31,7 +37,7 @@ import {
           md: '24',
         }}
       >
-        <Box bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')} backgroundColor="white" width="100vw" borderBottomRadius={'10'}>
+        <Box bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')} backgroundColor="white" width="100vw" borderTopRadius={'10'} borderBottomRadius={'10'}>
           <Container
             py={{
               base: '4',
@@ -108,7 +114,7 @@ import {
                   sm: 'center',
                 }}
               >
-                <Button colorScheme="pink" width="full">
+                <Button onClick={clickHandler} colorScheme="pink" width="full">
                   Listen Now
                 </Button>
                 <CloseButton

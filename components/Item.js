@@ -1,14 +1,10 @@
 import React from 'react';
-import { Box, Image, Text, Button } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Box, Image, Text, Button, Center, Link } from '@chakra-ui/react';
 
-const Item = ({ name, imageUrl }) => {
-    const [hover, setHover] = React.useState(false);
+const Item = ({ name, imageUrl, links }) => {
   
     return (
         <>
-
-    
     <Box w="300" h="300" textAlign="center" overflow="hidden" position="relative">
         <Image src={imageUrl} alt={name} objectFit="cover" h="300" w="300" style={{ display: 'block', margin: '0 auto' }} />
         <Box
@@ -19,28 +15,24 @@ const Item = ({ name, imageUrl }) => {
           bottom="0"
           pt="30%"
           textAlign="center"
-          bg={hover ? 'rgba(0, 0, 0, 0.4)' : 'rgba(0, 0, 0, 0)'}
           color="#fca1da"
           transition="0.3s"
-          opacity={hover ? "1" : '0'}
-          onMouseEnter={() => {
-            setHover(true);
-          }}
-          onMouseLeave={() => {
-            setHover(false);
-          }}
         >
-          <Text fontSize="xl" fontWeight="bold" fontFamily={'corsiva'}>
-            {name}
-          </Text>
         </Box>
       </Box>
   
       <Box position="relative" mt={4} textAlign="center">
-        <Text outlineColor="black"  fontSize="65" color="#fca1da" fontWeight="bold" fontFamily={'corsiva'}>
-          ~Listen~
+        <Text outlineColor="black" fontSize="25" color="#fca1da" fontWeight="bold" fontFamily={'corsiva'}>
+          {name}
         </Text>
       </Box>
+      <Center>
+        <Link href={links} target="_blank">
+        <Button colorScheme="pink" variant="outline" size="md" mt={4} mb={4}>
+          Listen Now
+        </Button>
+        </Link>
+      </Center>
       
       </>
     );
