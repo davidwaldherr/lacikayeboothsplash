@@ -61,7 +61,7 @@ const [showBanner, setShowBanner] = useState(false);
       backgroundPosition={"center"}
     >
       <Box bg="rgba(0, 0, 0, 0.7)">
-        <Text pt="4" color="#fca1da" textAlign={"center"} paddingTop={5} fontSize={110} fontFamily={'corsiva'}>
+        <Text pt="4" color="#fca1da" textAlign={"center"} paddingTop={5} fontSize={110}>
           MUSIC
         </Text>
         <Carousel images={images} links={links} names={names} />
@@ -122,7 +122,7 @@ const [showBanner, setShowBanner] = useState(false);
       borderTopWidth={5}
     >
 
-      <Text color={"#fca1da"} textAlign={"center"} paddingTop={5} fontSize={110} fontFamily={'corsiva'}>
+      <Text color={"#fca1da"} textAlign={"center"} paddingTop={5} fontSize={110}>
         VIDEO
       </Text>
 

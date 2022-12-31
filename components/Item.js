@@ -22,7 +22,7 @@ const Item = ({ name, imageUrl, links }) => {
       </Box>
   
       <Box position="relative" mt={4} textAlign="center">
-        <Text outlineColor="black" fontSize="25" color="#fca1da" fontWeight="bold" fontFamily={'corsiva'}>
+        <Text outlineColor="black" fontSize="25" color="#fca1da" fontWeight="bold">
           {name}
         </Text>
       </Box>
