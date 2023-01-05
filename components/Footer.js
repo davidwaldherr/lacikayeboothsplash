@@ -58,10 +58,11 @@ import {
                     lg: '360px',
                 }}
                 >
-                <Input backgroundColor="white" placeholder="Enter your email" type="email" required />
+                <Input backgroundColor="white" placeholder="Enter your email" type="text" name="email" required />
                 <Button colorScheme="pink" variant="solid" type="submit" flexShrink={0}>
                     Subscribe
                 </Button>
+                
                 </Stack>
             </Stack>
             </Stack>

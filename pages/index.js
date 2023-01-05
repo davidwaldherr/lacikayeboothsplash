@@ -106,11 +106,6 @@ const [showBanner, setShowBanner] = useState(false);
     
 </Box>
 
-
-
-
-
-
     {/* VIDEOS */}
     <Box 
       backgroundColor="black" 
@@ -121,7 +116,7 @@ const [showBanner, setShowBanner] = useState(false);
       borderTopColor={"#fca1da"}
       borderTopWidth={5}
     >
-
+      
       <Text color={"#fca1da"} textAlign={"center"} paddingTop={5} fontSize={110}>
         VIDEO
       </Text>
