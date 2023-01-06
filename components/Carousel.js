@@ -1,7 +1,7 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import Item from './Item';
+import Item from './Item.js';
 
 const responsive = {
   0: { items: 1 },
@@ -12,7 +12,7 @@ const responsive = {
 
 export const Carousel = ({ images, links, names}) => {
   const items = images.map((image, index) => (
-    <Item name={names[index]} imageUrl={image} links={links}/>
+    <Item name={names[index]} imageUrl={image} links={links[index]}/>
   ));
 
   return (

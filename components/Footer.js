@@ -58,11 +58,18 @@ import {
                     lg: '360px',
                 }}
                 >
-                <Input backgroundColor="white" placeholder="Enter your email" type="text" name="email" required />
+                {/* 
                 <Button colorScheme="pink" variant="solid" type="submit" flexShrink={0}>
-                    Subscribe
-                </Button>
-                
+                    Live 1/5/23
+                </Button> */}
+                <Input backgroundColor="white" placeholder="Enter your email" type="text" name="email" required />
+                <form action="https://lacikayebooth.us12.list-manage.com/subscribe/post?u=deeb8b8fe2765eee18a34648c&amp;id=696c52a8e1&amp;f_id=006abae0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                    <div className="mc-field-group">
+                        <Button colorScheme="pink" variant="solid" type="submit" flexShrink={0}>
+                        Join
+                        </Button>
+                    </div>
+                </form>
                 </Stack>
             </Stack>
             </Stack>

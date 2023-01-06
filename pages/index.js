@@ -106,6 +106,8 @@ const [showBanner, setShowBanner] = useState(false);
     
 </Box>
 
+
+
     {/* VIDEOS */}
     <Box 
       backgroundColor="black" 
